@@ -18,12 +18,12 @@ class Nobr extends Base
 
 		'super_nbsp' => array(
 				'description'	=> 'Привязка союзов и предлогов к написанным после словам',
-				'pattern' 		=> '/(\s|^|\&(la|bd)quo\;|\>|\(|\&mdash\;\&nbsp\;)([a-zа-яё]{1,2}\s+)([a-zа-яё]{1,2}\s+)?([a-zа-яё0-9\-]{2,}|[0-9])/ieu',
+				'pattern' 		=> '/(\s|^|\&(la|bd)quo\;|\>|\(|\&mdash\;\&nbsp\;)([a-zа-яё]{1,3}\s+)([a-zа-яё]{1,3}\s+)?([a-zа-яё0-9\-]{2,}|[0-9])/ieu',
 				'replacement' 	=> '$m[1] . trim($m[3]) . "&nbsp;" . ($m[4] ? trim($m[4]) . "&nbsp;" : "") . $m[5]'
 			),
 		'nbsp_in_the_end' => array(
 				'description'	=> 'Привязка союзов и предлогов к предыдущим словам в случае конца предложения',
-				'pattern' 		=> '/([a-zа-яё0-9\-]{3,}) ([a-zа-яё]{1,2})\.( [A-ZА-ЯЁ]|$)/u',
+				'pattern' 		=> '/([a-zа-яё0-9\-]{3,}) ([a-zа-яё]{1,3})\.( [A-ZА-ЯЁ]|$)/u',
 				'replacement' 	=> '\1&nbsp;\2.\3'
 			),
 		'phone_builder' => array(
