@@ -11,7 +11,7 @@ Authors: Evgeny Muravjev & Alexander Drutsa
 Для установки с помощью Composer, выполните команду:
 
 ```bash
-composer require valtu4a/typograph
+composer require alextele/typograph
 ```
 
 
